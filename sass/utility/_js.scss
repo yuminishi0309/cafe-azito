@@ -1,3 +1,32 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+// ハンバーガーメニュー設定
+.rotate {
+    &Top {
+        background: $white;
+        transform: rotate(45deg);
+    }
+    &Bottom {
+        background: $white;
+        transform: rotate(-45deg);
+    }
+}
+
+.hideMiddle {
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+}
+
+// gnavのfadeIn/Up
+.gnav-fadeIn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+// .gnav__nav-fadeUp {
+//     transform: translateY(0);
+//     opacity: 1;
+// }

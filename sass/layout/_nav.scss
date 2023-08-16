@@ -1,3 +1,91 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 60%;
+
+    &__link {
+        display: block;
+        padding: 1px 8px;
+        font-size: 10px;
+        font-weight: 400;
+        background: $navy;
+        color: $white;
+        text-decoration: none;
+
+        @media screen and (min-width: 768px) {
+            padding: 4px 18px;
+            font-size: 14px;
+        }
+    }
+}
+
+.btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+    z-index: 1;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__top {
+        @include menubtn(-10px)
+    }
+
+    &__middle {
+        @include menubtn
+    }
+
+    &__bottom {
+        @include menubtn(10px)
+    }
+}
+
+.gnav {
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding-left: 40px;
+    background: #000000c0;
+    border: 10px solid #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: .4s;
+
+    @media screen and (min-width: 768px) {
+        padding-left: 140px;
+        border: 16px solid #fff;
+
+    }
+
+    &__list {
+        margin: 32px 0;
+    }
+
+    &__link {
+        display: block;
+        color: $white;
+        font-size: 20px;
+        text-decoration: none;
+
+        @media screen and (min-width: 768px) {
+            font-size: 32px;
+          
+        }
+    }
+}
