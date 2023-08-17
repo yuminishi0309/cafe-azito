@@ -8,6 +8,10 @@
     gap: 10px;
     width: 60%;
 
+    @media screen and (min-width: 1024px) {
+        width: auto;
+    }
+
     &__link {
         display: block;
         padding: 1px 8px;
@@ -20,6 +24,11 @@
         @media screen and (min-width: 768px) {
             padding: 4px 18px;
             font-size: 14px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding: 7px 36px;
+            font-size: 16px;
         }
     }
 }
@@ -35,6 +44,10 @@
 
     &:hover {
         cursor: pointer;
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: none;
     }
 
     &__top {
@@ -70,11 +83,54 @@
     @media screen and (min-width: 768px) {
         padding-left: 140px;
         border: 16px solid #fff;
+    }
 
+    @media screen and (min-width: 1024px) {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        // margin-left: auto;
+        background: none;
+        border: none;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &__nav {
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: space-around;
+        }
     }
 
     &__list {
         margin: 32px 0;
+
+        @media screen and (min-width: 1024px) {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 0 2% 0 0;
+
+            &:nth-child(1) {
+                display: none;
+            }
+
+            &:nth-child(5) {
+                &::after {
+                    position: absolute;
+                    right: -64px;
+                    display: block;
+                    content: "";
+                    width: 1px;
+                    height: 22px;
+                    background: $navy;
+
+                }
+            }
+
+        }
     }
 
     &__link {
@@ -85,7 +141,12 @@
 
         @media screen and (min-width: 768px) {
             font-size: 32px;
-          
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding: 10px 20px;
+            color: $navy;
+            font-size: 18px;
         }
     }
 }

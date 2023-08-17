@@ -11,6 +11,11 @@
         padding: 30px 36px;
     }
 
+    @media screen and (min-width: 1024px) {
+        padding: 27px 4%;
+        background: $white;
+    }
+
     &__wrap {
         display: flex;
         justify-content: space-between;
@@ -24,7 +29,7 @@
         }
 
         @media screen and (min-width: 1024px) {
-            
+            width: 15%;
         }
     }
 
