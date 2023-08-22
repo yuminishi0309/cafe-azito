@@ -11,3 +11,106 @@
     transform: translateY($translate);
     transition: .4s;
 }
+//セクション余白
+@mixin sec__padding-top {
+    padding-top: 62px;
+    @media screen and (min-width: 768px) {
+        padding-top: 108px;
+    }
+
+}
+@mixin sec__space {
+    padding-left: 10px;
+    padding-right: 10px;
+    @media screen and (min-width: 768px) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding-left: 160px;
+        padding-left: 160px;
+    }
+
+}
+// セクションタイトル大
+@mixin sec__ttl-L {
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+    @media screen and (min-width: 768px) {
+        font-size: 60px;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 100px;
+        line-height: 1.44;
+    }
+}
+// セクションタイトル小
+@mixin sec__ttl-S {
+
+}
+
+// ボタン部品========================================
+@mixin btn__link {
+    position: relative;
+    display: inline-block;
+    height: 56px;
+    padding: 0 70px 0 20px;
+    color: $navy;  
+    border: 1px solid;
+    line-height: 56px;
+    text-decoration: none;
+}
+// ホバー設定背景
+// ホバー設定矢印
+@mixin btn__hover-arrow {
+    right: -40%;
+    background: $white;
+    z-index: 1;
+}
+
+// ボタン内文字
+@mixin btn__letter {
+    position: relative;
+    font-size: 16px;
+    transform-origin: center left;
+    transition: color 0.3s ease;
+    z-index: 1;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 18px;
+    }
+}
+// ボタン内矢印
+@mixin btn__line {
+    position: absolute;
+    top: 50%;
+    right: -26%;
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: $navy;
+    transition: all .3s ease;
+
+    @media screen and (min-width: 1024px) {
+        right: 17%;
+        width: 80px;
+    }
+}
+@mixin btn__arrow {
+    position: absolute;
+    top: 50%;
+    right: -26%;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: $navy;
+    transform: rotate(30deg) translateY(-4px) translateX(-1px);
+    transition: all .3s ease;
+
+    @media screen and (min-width: 1024px) {
+        right: 17%;
+    }
+}
+
