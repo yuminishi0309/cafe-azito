@@ -79,7 +79,6 @@
             position: absolute;
             top: 32px;
             left: 10px;
-            opacity: 0.8;
 
             @media screen and (min-width: 768px) {
                 top: 45px;
@@ -135,100 +134,34 @@
         }
 
         &__link {
-            position: relative;
-            display: inline-block;
-            height: 56px;
-            padding: 0 70px 0 20px;
-            color: $navy;
-            border: 1px solid;
-            line-height: 56px;
-            text-decoration: none;
-
-            @media screen and (min-width: 1024px) {
-                height: 80px;
-                padding: 0 188px 0 35px;
-                line-height: 80px;
-            }
+            @include btn__link;
 
             &:hover {
                 &::after {
-                    width: 100%;
-                    left: 0;
-                    right: auto;
+                    @include btn__hover-bg
                 }
-
                 .concept__letter {
-                    color: $white;
+                    @include btn__hover-letter;
                 }
-
                 .concept__line,
                 .concept__arrow {
-                    right: -40%;
-                    background: $white;
-                    z-index: 1;
-
-                    @media screen and (min-width: 1024px) {
-                        right: -10%;
-                    }
+                    @include btn__hover-arrow;
                 }
-            }
-
-            // ボタンのスライド要素
-            &::after {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                left: auto;
-                content: "";
-                height: 100%;
-                width: 0;
-                background: $navy;
-                transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
             }
         }
 
+        // ボタン内文字
         &__letter {
-            position: relative;
-            font-size: 16px;
-            transform-origin: center left;
-            transition: color 0.3s ease;
-            z-index: 1;
-            @media screen and (min-width: 1024px) {
-                font-size: 18px;
-            }
+            @include btn__letter;
         }
 
         // ボタン内矢印
         &__line {
-            position: absolute;
-            top: 50%;
-            right: -26%;
-            display: block;
-            width: 100px;
-            height: 1px;
-            background: $navy;
-            transition: all .3s ease;
-
-            @media screen and (min-width: 1024px) {
-                right: 17%;
-                width: 80px;
-            }
+            @include btn__line
         }
         
         &__arrow {
-            position: absolute;
-            top: 50%;
-            right: -26%;
-            display: block;
-            width: 16px;
-            height: 1px;
-            background: $navy;
-            transform: rotate(30deg) translateY(-4px) translateX(-1px);
-            transition: all .3s ease;
-
-            @media screen and (min-width: 1024px) {
-                right: 17%;
-            }
+            @include btn__arrow
         }
 
         &__pic {
@@ -261,103 +194,243 @@
             width: 100%;
             padding-top: 56px;
             padding-bottom: 46px;
-            margin-bottom: 62px;
-
+            // margin-bottom: 62px;
+            
             @media screen and (min-width: 1024px) {
                 padding-top: 100px;
                 padding-bottom: 120px;
+                margin-bottom: 52px;
             }
         }
-
+        
         &__ttl {
             @include sec__ttl-L;
-
+            
             margin-bottom: 28px;
         }
-
+        
         &__txt {
             margin-bottom: 8px;
-
+            
             @media screen and (min-width: 1024px) {
                 margin-bottom: 32px;
+                letter-spacing: 0.2em;
             }
 
             &:nth-child(3) {
                 margin-bottom: 40px;
-
+                
                 @media screen and (min-width: 1024px) {
                     margin-bottom: 88px;
                 }
             }
         }
-
+        
         &__br {
             display: none;
-
+            
             @media screen and (min-width: 1024px) {
                 display: inline;
             }
-
+            
         }
-
+        
         &__btn {
             display: inline-block;
         }
-
+        
         &__link {
             @include btn__link;
             color: $white;
             font-size: 16px;
             border: none;
-
+            
             @media screen and (min-width: 1024px) {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                padding: 10px;
                 font-size: 18px;
             }
-
+            
             &:hover {
                 .please__line {
-                    right: -120px;
+                    right: -20%;
+                    @media screen and (min-width: 1024px) {
+                        right: -100px;
+                    }
                 }
                 .please__arrow {
-                    right: -104px;
+                    right: -20%;
+                    @media screen and (min-width: 1024px) {
+                        right: -84px;
+                    }
                 }
             }
         }
-
+        
         &__line {
             @include btn__line;
             
             right: -6%;
             background: $white;
             width: 60px;
-
+            
             @media screen and (min-width: 1024px) {
                 position: relative;
                 top: 0;
                 right: -40px;
                 width: 80px;
             }
-            
         }
         
         &__arrow {
             @include btn__arrow;
-
+            
             right: -6%;
             background: $white;
-
+            
             @media screen and (min-width: 1024px) {
                 position: relative;
                 top: 0;
                 right: -24px;
             }
         }
-
-
     }
+    // service section=============================================
+    .service {
+        @include sec__space;
+        @include sec__padding-top;
 
+        &__ttl {
+            @include sec__ttl-L;
+
+            text-align: center;
+            margin-bottom: 28px;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 60px;
+            }
+
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 160px;
+            }
+            
+            // SP/Tab版：2段目のpicとboxを入れ替え
+            &:nth-child(3) .service__box {
+                order: 1;
+                @media screen and (min-width: 1024px) {
+                    order: initial;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                flex-direction: row;
+                align-items: center;
+                gap: 6.3%;
+                // PC版：1,3段目のレイアウト
+                &:nth-child(even) .service__box {
+                    margin-right: auto;
+                }
+                // PC版：2段目のレイアウト
+                &:nth-child(3) .service__box {
+                    margin-left: auto;
+                }
+            }
+
+        }
+        &__box {
+            @media screen and (min-width: 1024px) {
+                width: 35%;
+            }
+        }
+
+        &__pic {
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 1024px) {
+                width: 50%;
+            }
+        }
+
+        &__img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__menu {
+            margin-bottom: 10px;
+            font-size: 22px;
+            letter-spacing: 0.16em;
+            line-height: 1;
+            opacity: .8;
+        
+            @media screen and (min-width: 1024px) {
+                font-size: 54px;
+                margin-bottom: 28px;
+            }
+        }
+
+        &__txt {
+            margin-bottom: 24px;
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 28px;
+            }
+        }
+
+        // ボタン設定
+        &__link {
+            @include btn__link;
+
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                max-width: 312px;
+                padding: 0;
+            }
+
+            &:hover {
+                &::after {
+                    @include btn__hover-bg
+                }
+                .service__letter {
+                    @include btn__hover-letter;
+                }
+                .service__line,
+                .service__arrow {
+                    @include btn__hover-arrow;
+                }
+            }
+        }
+
+        // ボタン内文字
+        &__letter {
+            @include btn__letter;
+
+            @media screen and (min-width: 1024px) {
+                margin-left: 35px;
+            }
+        }
+
+        // ボタン内矢印
+        &__line {
+            @include btn__line
+        }
+        
+        &__arrow {
+            @include btn__arrow
+        }
+    }
+    // info section=============================================
+    .info {
+        @include sec__padding-top;
+    }
 }
 
