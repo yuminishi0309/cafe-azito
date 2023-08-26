@@ -302,6 +302,8 @@
         @include sec__space;
         @include sec__padding-top;
 
+        margin-bottom: 68px;
+
         &__ttl {
             @include sec__ttl-L;
 
@@ -442,7 +444,31 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: 128px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 146px;
+        }
+
+        &__container {
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+            }
+        }
+
+        &__pic {
+            @media screen and (min-width: 1024px) {
+                background: url(../images/info.jpg) center center / cover;
+                width: 39%;
+            }
+        }
+
+        &__box {
+            @media screen and (min-width: 1024px) {
+                width: 53%;
+            }
+
         }
 
         &__ttl {
@@ -450,10 +476,25 @@
             font-size: 22px;
             letter-spacing: 0.16em;
             line-height: 1;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 48px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: 54px;
+            }
         }
 
         &__info {
             margin-bottom: 28px;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 40px;
+            }
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 60px;
+            }
         }
 
         &__unit {
