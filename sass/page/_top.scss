@@ -447,6 +447,12 @@
             display: flex;
             justify-content: center;
             margin-bottom: 146px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        @media screen and (min-width: 1320px) {
+            padding-left: 160px;
+            padding-right: 160px;
         }
 
         &__container {
@@ -459,7 +465,7 @@
 
         &__pic {
             @media screen and (min-width: 1024px) {
-                background: url(../images/info.jpg) center center / cover;
+                background: url(../images/info.jpg) center center / cover no-repeat;
                 width: 39%;
             }
         }
@@ -482,6 +488,9 @@
             }
 
             @media screen and (min-width: 1024px) {
+                font-size: 44px;
+            }
+            @media screen and (min-width: 1320px) {
                 font-size: 54px;
             }
         }
@@ -530,10 +539,16 @@
             }
         }
 
-        &__link-dl {
+        &__link-info {
             padding: 10px 0;
             color: $white;
             text-decoration: none;
+            transition: color 0.3s ease;
+
+
+            &:hover {
+                color: $navy;
+            }
         }
 
         // ボタン設定
