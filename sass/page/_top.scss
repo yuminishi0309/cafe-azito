@@ -434,11 +434,12 @@
     .info {
         @include sec__padding-top;
         @include sec__space;
-
+        
         padding-bottom: 72px;
+        margin-bottom: 68px;
         color: $white;
         background: rgba(80, 80, 150, 0.5);
-
+        
         @media screen and (min-width: 768px) {
             padding-bottom: 108px;
         }
@@ -446,7 +447,7 @@
         @media screen and (min-width: 1024px) {
             display: flex;
             justify-content: center;
-            margin-bottom: 146px;
+            margin-bottom: 178px;
             padding-left: 80px;
             padding-right: 80px;
         }
@@ -454,7 +455,7 @@
             padding-left: 160px;
             padding-right: 160px;
         }
-
+        
         &__container {
             @media screen and (min-width: 1024px) {
                 display: flex;
@@ -462,31 +463,31 @@
                 width: 80%;
             }
         }
-
+        
         &__pic {
             @media screen and (min-width: 1024px) {
                 background: url(../images/info.jpg) center center / cover no-repeat;
                 width: 39%;
             }
         }
-
+        
         &__box {
             @media screen and (min-width: 1024px) {
                 width: 53%;
             }
-
+            
         }
-
+        
         &__ttl {
             margin-bottom: 28px;
             font-size: 22px;
             letter-spacing: 0.16em;
             line-height: 1;
-
+            
             @media screen and (min-width: 768px) {
                 margin-bottom: 48px;
             }
-
+            
             @media screen and (min-width: 1024px) {
                 font-size: 44px;
             }
@@ -494,7 +495,7 @@
                 font-size: 54px;
             }
         }
-
+        
         &__info {
             margin-bottom: 28px;
 
@@ -505,13 +506,13 @@
                 margin-bottom: 60px;
             }
         }
-
+        
         &__unit {
             position: relative;
             display: flex;
             gap: 26px;
             padding: 16px;
-
+            
             @media screen and (min-width: 1024px) {
                 padding: 24px 0;
             }
@@ -538,32 +539,32 @@
                 }
             }
         }
-
+        
         &__link-info {
             padding: 10px 0;
             color: $white;
             text-decoration: none;
             transition: color 0.3s ease;
-
-
+            
+            
             &:hover {
                 color: $navy;
             }
         }
-
+        
         // ボタン設定
         &__link {
             @include btn__link;
-
+            
             background: $white;
             border: none;
-
+            
             @media screen and (min-width: 1024px) {
                 width: 100%;
                 max-width: 312px;
                 padding: 0;
             }
-
+            
             &:hover {
                 &::after {
                     @include btn__hover-bg
@@ -577,16 +578,16 @@
                 }
             }
         }
-
+        
         // ボタン内文字
         &__letter {
             @include btn__letter;
-
+            
             @media screen and (min-width: 1024px) {
                 margin-left: 35px;
             }
         }
-
+        
         // ボタン内矢印
         &__line {
             @include btn__line
@@ -595,7 +596,33 @@
         &__arrow {
             @include btn__arrow
         }
+        
+    }
+    
+    // instagram section=============================================
+    .insta {
 
+        margin-bottom: 68px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 204px;
+        }
+        
+        &__ttl {
+            text-align: center;
+            margin-bottom: 28px;
+            font-size: 22px;
+            letter-spacing: 0.16em;
+            line-height: 1;
+            opacity: 0.8;
+        
+            @media screen and (min-width: 768px) {
+                margin-bottom: 48px;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 54px;
+            }
+        }
     }
 }
 
