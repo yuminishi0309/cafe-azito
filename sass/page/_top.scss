@@ -601,7 +601,6 @@
     
     // instagram section=============================================
     .insta {
-
         margin-bottom: 68px;
 
         @media screen and (min-width: 1024px) {
@@ -620,13 +619,16 @@
                 margin-bottom: 48px;
             }
             @media screen and (min-width: 1024px) {
+                margin-bottom: 56px;
                 font-size: 54px;
             }
         }
 
         // ボタン設定
         &__btn {
+            text-align: center;
             @media screen and (min-width: 1024px) {
+                text-align: unset;
                 width: 314px;
                 margin: 0 auto;
             }
@@ -671,6 +673,18 @@
         
         &__arrow {
             @include btn__arrow
+        }
+    }
+
+    // スワイパー
+    .swiper-insta {
+        margin-bottom: 28px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 52px;
+        }
+        @media screen and (min-width: 768px) {
+            margin-bottom: 60px;
         }
     }
 }
