@@ -623,6 +623,55 @@
                 font-size: 54px;
             }
         }
+
+        // ボタン設定
+        &__btn {
+            @media screen and (min-width: 1024px) {
+                width: 314px;
+                margin: 0 auto;
+            }
+        }
+
+        &__link {
+            @include btn__link;
+
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                max-width: 312px;
+                padding: 0;
+            }
+
+            &:hover {
+                &::after {
+                    @include btn__hover-bg
+                }
+                .insta__letter {
+                    @include btn__hover-letter;
+                }
+                .insta__line,
+                .insta__arrow {
+                    @include btn__hover-arrow;
+                }
+            }
+        }
+
+        // ボタン内文字
+        &__letter {
+            @include btn__letter;
+
+            @media screen and (min-width: 1024px) {
+                margin-left: 35px;
+            }
+        }
+
+        // ボタン内矢印
+        &__line {
+            @include btn__line
+        }
+        
+        &__arrow {
+            @include btn__arrow
+        }
     }
 }
 

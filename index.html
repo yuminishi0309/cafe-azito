@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
   </head>
   
@@ -168,7 +169,27 @@
           <!-- instagram section ======================================================= -->
           <section class="insta" id="insta">
             <h2 class="insta__ttl">Instagram</h2>
-            <p class="insta__btn"><a href="#top" class="insta__link">Follow us</a></p>
+            <!-- スワイパー本体 ===================  -->
+            <div class="swiper swiper-insta">
+              <!-- スワイパーラッパー -->
+              <div class="swiper-wrapper swiper-insta__wrapper">
+                <!-- スライドのみが入る -->
+                <div class="swiper-slide swiper-insta__slide"><img src="images/insta1.jpg" alt="ドリンク" class="swiper-insta__img"></div>
+                <div class="swiper-slide swiper-insta__slide"><img src="images/insta2.jpg" alt="テラス席風景" class="swiper-insta__img"></div>
+                <div class="swiper-slide swiper-insta__slide"><img src="images/insta3.jpg" alt="店内風景" class="swiper-insta__img"></div>
+                <div class="swiper-slide swiper-insta__slide"><img src="images/insta4.jpg" alt="カフェの食事" class="swiper-insta__img"></div>
+                <div class="swiper-slide swiper-insta__slide"><img src="images/insta5.jpg" alt="店からの夕焼け風景" class="swiper-insta__img"></div>
+                <div class="swiper-slide swiper-insta__slide"><img src="images/insta6.jpg" alt="ロケーションレンタルの撮影風景" class="swiper-insta__img"></div>
+              </div>
+            </div>
+            <!-- ここまでスワイパー ===================  -->
+            <p class="insta__btn">
+              <a href="#top" class="insta__link">
+                <span class="insta__letter">Follow us</span>
+                <span class="insta__line"></span>
+                <span class="insta__arrow"></span>
+              </a>
+            </p>
           </section>
         </div>
       </main>
@@ -176,21 +197,28 @@
       <!-- フッター  ---------------------------------------------------------------------------------------------- -->
       <footer class="footer" id="footer">
         <div class="footer__container">
+          <h2 class="footer__ttl">Access</h2>
           <div class="footer__box">
-            <h2 class="footer__ttl">Access</h2>
-            <p class="footer__txt">大阪府泉南郡岬町淡輪 1390  TEL & FAX 072-496-1390</p>
-            <p class="footer__txt">●南海本線「淡輪」駅下車 / 北方向へ徒歩約12分</p>
-            <p class="footer__txt">●駐車場あり（5台）</p>
-            <p class="footer__pic"><img src="images/footer1.jpg" alt="駐車場のイラスト" class="footer__img"></p>
+            <div class="footer__unit">
+              <p class="footer__txt">大阪府泉南郡岬町淡輪 1390  TEL & FAX 072-496-1390</p>
+              <p class="footer__txt">●南海本線「淡輪」駅下車 / 北方向へ徒歩約12分</p>
+              <p class="footer__txt">●駐車場あり（5台）</p>
+              <p class="footer__pic"><img src="images/footer1.jpg" alt="駐車場のイラスト" class="footer__img"></p>
+            </div>
+            <p class="footer__map"><img src="images/footer2.jpg" alt="店舗地図" class="footer__img"></p>
           </div>
-          <p class="footer__map"><img src="images/footer2.jpg" alt="店舗地図" class="footer__img"></p>
         </div>
         <p class="footer__copy"><small class="footer__small">&copy;Copyright  2022</small></p>
       </footer>
     </div>
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- swiper本体 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- jQuery本体 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- .jsファイルの読み込み -->
+    <script src="js/swiper.js"></script>
     <script src="js/function.js"></script>
+
   </body>
 </html>

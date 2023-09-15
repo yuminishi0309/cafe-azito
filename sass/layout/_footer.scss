@@ -1,3 +1,95 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+.footer {
+    padding: 62px 10px;
+    background: url(../images/footer3.jpg) center center / cover;
+    
+    @media screen and (min-width: 768px) {
+        padding: 80px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 110px 160px;
+    }
+
+    &__container {
+        margin-bottom: 32px;
+        
+        @media screen and (min-width: 768px) {
+            padding: 40px 10% 80px;
+            margin-bottom: 54px;
+            background: $white;
+        }
+    }
+
+    &__box {
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__unit {
+        @media screen and (min-width: 1024px) {
+            width: 43%;
+        }
+    }
+
+    &__ttl {
+        text-align: center;
+        margin-bottom: 24px;
+        font-size: 26px;
+        font-weight: 600;
+        
+        @media screen and (min-width: 768px) {
+            margin-bottom: 41px;
+        }
+    }
+
+    &__txt {
+        &:nth-child(3) {
+            margin-bottom: 16px;
+            
+            @media screen and (min-width: 768px) {
+                margin-bottom: 34px;
+            }
+        }
+    }
+
+    &__pic {
+        width: 100%;
+        margin-bottom: 12px;
+        
+        @media screen and (min-width: 768px) {
+            margin-bottom: 20px;
+          
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
+
+    &__map {
+        width: 100%;
+
+        @media screen and (min-width: 1024px) {
+            width: 43%;
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        font-size: 10px;
+        
+        @media screen and (min-width: 768px) {
+            font-size: 12px;
+        }
+    }
+
+    
+
+}
