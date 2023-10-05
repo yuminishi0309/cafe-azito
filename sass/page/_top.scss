@@ -508,7 +508,6 @@
         }
         
         &__unit {
-            position: relative;
             display: flex;
             gap: 26px;
             padding: 16px;
@@ -516,6 +515,14 @@
             @media screen and (min-width: 1024px) {
                 padding: 24px 0;
             }
+        }
+        
+        &__link-info {
+            position: relative;
+            padding: 10px 0;
+            color: $white;
+            text-decoration: none;
+            transition: color 0.3s ease;
             
             &::before {
                 position: absolute;
@@ -526,7 +533,7 @@
                 height: 1px;
                 background: $white;
             }
-            
+
             &:last-child {
                 &::after {
                     position: absolute;
@@ -538,15 +545,7 @@
                     background: $white;
                 }
             }
-        }
-        
-        &__link-info {
-            padding: 10px 0;
-            color: $white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            
-            
+
             &:hover {
                 color: $navy;
             }
