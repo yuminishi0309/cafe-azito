@@ -359,6 +359,7 @@
 
             @media screen and (min-width: 1024px) {
                 width: 50%;
+                margin-bottom: 0;
             }
         }
 
@@ -685,7 +686,7 @@
         @media screen and (min-width: 768px) {
             margin-bottom: 60px;
         }
-        
+
         &__img {
             display: block;
         }
