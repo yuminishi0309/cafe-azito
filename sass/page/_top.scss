@@ -190,11 +190,11 @@
         
         &__bg {
             @include sec__space;
+
             background: url(../images/please.jpg) center center / cover;
             width: 100%;
             padding-top: 56px;
             padding-bottom: 46px;
-            // margin-bottom: 62px;
             
             @media screen and (min-width: 1024px) {
                 padding-top: 100px;
@@ -241,6 +241,7 @@
         
         &__link {
             @include btn__link;
+
             color: $white;
             font-size: 16px;
             border: none;
@@ -256,12 +257,14 @@
             &:hover {
                 .please__line {
                     right: -20%;
+
                     @media screen and (min-width: 1024px) {
                         right: -100px;
                     }
                 }
                 .please__arrow {
                     right: -20%;
+
                     @media screen and (min-width: 1024px) {
                         right: -84px;
                     }
@@ -384,6 +387,7 @@
 
         &__txt {
             margin-bottom: 24px;
+
             @media screen and (min-width: 1024px) {
                 margin-bottom: 28px;
             }
@@ -444,7 +448,6 @@
         @media screen and (min-width: 768px) {
             padding-bottom: 108px;
         }
-
         @media screen and (min-width: 1024px) {
             display: flex;
             justify-content: center;
@@ -476,7 +479,6 @@
             @media screen and (min-width: 1024px) {
                 width: 53%;
             }
-            
         }
         
         &__ttl {
@@ -488,7 +490,6 @@
             @media screen and (min-width: 768px) {
                 margin-bottom: 48px;
             }
-            
             @media screen and (min-width: 1024px) {
                 font-size: 44px;
             }
@@ -627,6 +628,7 @@
         // ボタン設定
         &__btn {
             text-align: center;
+
             @media screen and (min-width: 1024px) {
                 text-align: unset;
                 width: 314px;
@@ -691,7 +693,5 @@
             display: block;
         }
     }
-    
-
 }
 

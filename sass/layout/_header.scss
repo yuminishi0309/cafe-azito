@@ -11,7 +11,6 @@
     @media screen and (min-width: 768px) {
         padding: 30px 36px;
     }
-
     @media screen and (min-width: 1024px) {
         padding: 27px 4%;
         background: $white;
@@ -26,13 +25,13 @@
             position: relative;
         }
     }
+
     &__ttl {
         width: 24%;
 
         @media screen and (min-width: 768px) {
             width: 28%;
         }
-
         @media screen and (min-width: 1024px) {
             width: 15%;
         }

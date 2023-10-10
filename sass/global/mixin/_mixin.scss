@@ -1,5 +1,4 @@
 // settingフォルダの変数を読み込みます
-
 @use "../setting" as *;
 
 //ハンバーガーメニュー
@@ -18,7 +17,6 @@
     @media screen and (min-width: 768px) {
         padding-top: 108px;
     }
-
 }
 @mixin sec__space {
     padding-left: 10px;
@@ -94,7 +92,6 @@
 @mixin btn__hover-letter {
     color: $white;
 }
-
 // ボタン内文字
 @mixin btn__letter {
     position: relative;
@@ -138,6 +135,3 @@
         right: 17%;
     }
 }
-
-// service section==========================================
-
